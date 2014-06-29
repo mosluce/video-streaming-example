@@ -39,7 +39,7 @@ app.get('/videos', function (req, res) {
 //讀取影片
 app.get('/watch/:vid', function (req, res) {
     //TODO: 依照傳入的 vid 取得指定的檔案
-    var path = __dirname + '/videos/NGNL/' + req.param("vid") + '.mp4';
+    var path = __dirname + '/videos/' + req.param("vid") + '.mp4';
 
     //開始處理串流
     var stat = fs.statSync(path);
